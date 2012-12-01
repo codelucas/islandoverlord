@@ -1,0 +1,58 @@
+RESOURCE AND JOB MANAGEMENT:
+==================================================
+Entities 
+=============================
+-Animal(s)                    **desc is the string representation of the class name.
+-Building(s)                  **workType is the string representation of the possible job of the entity
+-Mineral <-- Meteor
+-Person(s)  <-- Costs 25 food
+-Pond  <== Dummy entity, can never be deleted or seen, just a location for animals to drink.
+-Shrine <== Pre-set locaiton where people pray, its also a real entity.
+-Tree(s)
+
+Possible Jobs:
+=============================
+"Woodcut"
+"Mine"
+"Hunt"
+"Pray"
+"Build"  ***Build and return are special tasks because
+"Return"	they don't involve "exhausting" an entity, they create entities 
+			or simply return.
+
+Possible Returned Resources:
+=============================
+"M" Minerals
+"F" Food
+"W" Wood
+"E" God Energy
+"N" Nothing *** "N" is the default resource being held.
+
+Building Types: ***IMPORTANT*** The Main Hut is special because it has an island representation in x, y coords, along with its object.
+								Villagers all return items to the x, y coord representation, and not the physical object, so whenever we
+								are manipulating the Main Hut, be sure to manipulate both!
+=============================
+									Cost in (wood, mineral, food, intelligence):      
+"Main Hut"                                 500, 0, 0, 0                                
+"Basic Hut"								   250, 0, 0, 0                            
+"Barracks"								   250, 250, 0, 70                                
+"Library"                                  500, 500, 500, 400							
+"Pub"                                      250, 250, 250, 0						  
+"Wonder" 								   500, 500, 500, 1000
+
+Supernatural Entities
+=============================
+"Meteor Shower"
+"Earthquake"
+"Erase"
+
+Emoticons
+=============================
+0 = alert, 
+1 = build, 
+2 = sad, 
+3 = happy, 
+4 = eating, 
+5 = bored,
+6 = pray,
+
